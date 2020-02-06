@@ -251,10 +251,9 @@ exports[`jobs should match with snapshot 1`] = `
           <td
             class="text-start"
           >
-            <i
+            <button
               class="v-icon notranslate v-data-table__expand-icon v-icon--link  fas fa-chevron-down theme--light"
-              role="button"
-              tabindex="0"
+              type="button"
             />
           </td>
         </tr>
@@ -291,10 +290,9 @@ exports[`jobs should match with snapshot 1`] = `
           <td
             class="text-start"
           >
-            <i
+            <button
               class="v-icon notranslate v-data-table__expand-icon v-icon--link  fas fa-chevron-down theme--light"
-              role="button"
-              tabindex="0"
+              type="button"
             />
           </td>
         </tr>
@@ -331,10 +329,9 @@ exports[`jobs should match with snapshot 1`] = `
           <td
             class="text-start"
           >
-            <i
+            <button
               class="v-icon notranslate v-data-table__expand-icon v-icon--link  fas fa-chevron-down theme--light"
-              role="button"
-              tabindex="0"
+              type="button"
             />
           </td>
         </tr>
@@ -401,10 +398,7 @@ exports[`jobs should match with snapshot 1`] = `
             <div
               class="v-menu"
             >
-              <div
-                class="v-menu__content theme--light "
-                style="max-height: 304px; min-width: 0px; max-width: auto; top: 12px; left: 0px; transform-origin: top left; z-index: 0; display: none;"
-              />
+              <!---->
             </div>
           </div>
         </div>
