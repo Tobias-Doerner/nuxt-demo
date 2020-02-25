@@ -371,7 +371,7 @@ exports[`jobs should match with snapshot 1`] = `
                 </div>
                 <input
                   aria-label="$vuetify.dataTable.itemsPerPageText"
-                  aria-readonly="true"
+                  aria-readonly="false"
                   autocomplete="off"
                   id="input-23"
                   readonly="readonly"
