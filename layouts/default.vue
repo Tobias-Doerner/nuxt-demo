@@ -2,11 +2,11 @@
   <v-app>
     <the-navbar></the-navbar>
     <the-app-bar></the-app-bar>
-    <v-content>
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
     <the-footer></the-footer>
   </v-app>
 </template>

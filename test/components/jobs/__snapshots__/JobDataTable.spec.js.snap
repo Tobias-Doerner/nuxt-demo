@@ -5,7 +5,7 @@ exports[`jobs should match with snapshot 1`] = `
   class="v-data-table elevation-2 v-data-table--fixed-header theme--light"
 >
   <header
-    class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--flat"
+    class="v-sheet theme--light v-toolbar v-toolbar--flat"
     style="height: 64px;"
   >
     <div
@@ -36,13 +36,13 @@ exports[`jobs should match with snapshot 1`] = `
             >
               <label
                 class="v-label theme--light"
-                for="input-10"
+                for="input-9"
                 style="left: 0px; position: absolute;"
               >
                 Suche
               </label>
               <input
-                id="input-10"
+                id="input-9"
                 type="text"
               />
             </div>
@@ -160,7 +160,6 @@ exports[`jobs should match with snapshot 1`] = `
           </th>
           <th
             aria-label="Erstelldatum"
-            aria-sort="none"
             class="text-start"
             role="columnheader"
             scope="col"
@@ -171,7 +170,6 @@ exports[`jobs should match with snapshot 1`] = `
           </th>
           <th
             aria-label=""
-            aria-sort="none"
             class="text-start"
             role="columnheader"
             scope="col"
@@ -192,9 +190,9 @@ exports[`jobs should match with snapshot 1`] = `
             <div
               aria-valuemax="100"
               aria-valuemin="0"
-              class="v-progress-linear theme--light"
+              class="v-progress-linear v-progress-linear--absolute theme--light"
               role="progressbar"
-              style="height: 2px;"
+              style="height: 4px;"
             >
               <div
                 class="v-progress-linear__background primary"
@@ -203,16 +201,20 @@ exports[`jobs should match with snapshot 1`] = `
               <div
                 class="v-progress-linear__buffer"
               />
-              <div
-                class="v-progress-linear__indeterminate v-progress-linear__indeterminate--active"
+              <transition-stub
+                name="fade-transition"
               >
                 <div
-                  class="v-progress-linear__indeterminate long primary"
-                />
-                <div
-                  class="v-progress-linear__indeterminate short primary"
-                />
-              </div>
+                  class="v-progress-linear__indeterminate v-progress-linear__indeterminate--active"
+                >
+                  <div
+                    class="v-progress-linear__indeterminate long primary"
+                  />
+                  <div
+                    class="v-progress-linear__indeterminate short primary"
+                  />
+                </div>
+              </transition-stub>
             </div>
           </th>
         </tr>
@@ -354,7 +356,7 @@ exports[`jobs should match with snapshot 1`] = `
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="list-23"
+            aria-owns="list-22"
             class="v-input__slot"
             role="button"
           >
@@ -373,7 +375,7 @@ exports[`jobs should match with snapshot 1`] = `
                   aria-label="$vuetify.dataTable.itemsPerPageText"
                   aria-readonly="false"
                   autocomplete="off"
-                  id="input-23"
+                  id="input-22"
                   readonly="readonly"
                   type="text"
                 />

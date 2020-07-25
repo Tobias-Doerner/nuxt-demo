@@ -2,7 +2,7 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="-30 -10 460 318"
-    style="background: #E8F5E9"
+    style="background: #e8f5e9;"
   >
     <g fill-rule="nonzero" fill="none">
       <path

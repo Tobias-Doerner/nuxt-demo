@@ -2,86 +2,90 @@
 
 exports[`TheFooter.vue should match with snapshot 1`] = `
 <footer
-  class="v-footer v-sheet v-sheet--tile theme--light v-footer--fixed v-footer--padless v-footer--inset brown darken-3"
+  class="v-footer v-sheet theme--light v-footer--fixed v-footer--padless v-footer--inset brown darken-3"
   style="left: 0px; right: 0px; bottom: 0px;"
 >
   <div
-    class="brown darken-3 text-center mx-auto v-card v-card--flat v-sheet v-sheet--tile theme--light"
+    class="brown darken-3 text-center mx-auto v-card v-card--flat v-sheet theme--light rounded-0"
   >
-    <div
-      class="v-card__text white--text pt-2"
-      style="display: none;"
+    <transition-stub
+      name="fade"
     >
-      
+      <div
+        class="v-card__text white--text pt-2"
+        style="display: none;"
+      >
+        
         Nuxt.js Demo-Anwendung, erstellt von Tobias Dörner, besucht mich auf meinen Social Media Kanälen.
         
-      <div>
-        <a
-          class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-          href="https://de.linkedin.com/in/tobias-doerner-367170150"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <span
-            class="v-btn__content"
+        <div>
+          <a
+            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
+            href="https://de.linkedin.com/in/tobias-doerner-367170150"
+            rel="noreferrer"
+            target="_blank"
           >
-            <i
-              aria-hidden="true"
-              class="v-icon notranslate fab fa-linkedin theme--light"
-              style="font-size: 24px;"
-            />
-          </span>
-        </a>
-        <a
-          class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-          href="https://www.xing.com/profile/Tobias_Doerner7"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <span
-            class="v-btn__content"
+            <span
+              class="v-btn__content"
+            >
+              <i
+                aria-hidden="true"
+                class="v-icon notranslate fab fa-linkedin theme--light"
+                style="font-size: 24px;"
+              />
+            </span>
+          </a>
+          <a
+            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
+            href="https://www.xing.com/profile/Tobias_Doerner7"
+            rel="noreferrer"
+            target="_blank"
           >
-            <i
-              aria-hidden="true"
-              class="v-icon notranslate fab fa-xing theme--light"
-              style="font-size: 24px;"
-            />
-          </span>
-        </a>
-        <a
-          class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-          href="https://twitter.com/Tobias_Doerner"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <span
-            class="v-btn__content"
+            <span
+              class="v-btn__content"
+            >
+              <i
+                aria-hidden="true"
+                class="v-icon notranslate fab fa-xing theme--light"
+                style="font-size: 24px;"
+              />
+            </span>
+          </a>
+          <a
+            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
+            href="https://twitter.com/Tobias_Doerner"
+            rel="noreferrer"
+            target="_blank"
           >
-            <i
-              aria-hidden="true"
-              class="v-icon notranslate fab fa-twitter theme--light"
-              style="font-size: 24px;"
-            />
-          </span>
-        </a>
-        <a
-          class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-          href="https://github.com/Tobias-Doerner"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <span
-            class="v-btn__content"
+            <span
+              class="v-btn__content"
+            >
+              <i
+                aria-hidden="true"
+                class="v-icon notranslate fab fa-twitter theme--light"
+                style="font-size: 24px;"
+              />
+            </span>
+          </a>
+          <a
+            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
+            href="https://github.com/Tobias-Doerner"
+            rel="noreferrer"
+            target="_blank"
           >
-            <i
-              aria-hidden="true"
-              class="v-icon notranslate fab fa-github theme--light"
-              style="font-size: 24px;"
-            />
-          </span>
-        </a>
+            <span
+              class="v-btn__content"
+            >
+              <i
+                aria-hidden="true"
+                class="v-icon notranslate fab fa-github theme--light"
+                style="font-size: 24px;"
+              />
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
+    </transition-stub>
      
     <div
       class="v-card__text white--text pa-0"
