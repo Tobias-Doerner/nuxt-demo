@@ -1,83 +1,55 @@
 import de from 'vuetify/es5/locale/de'
 import en from 'vuetify/es5/locale/en'
+import colors from 'vuetify/es5/util/colors'
 import pkg from './package'
 
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'spa',
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
-  target: 'server',
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
+  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  ssr: false,
+
+  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: pkg.name,
-    htmlAttrs: {
-      lang: 'de'
-    },
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: pkg.description
-      }
+      { name: 'author', content: pkg.author },
+      { name: 'description', content: pkg.description, hid: 'description' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     noscript: [{ innerHTML: 'This website requires JavaScript!' }],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: '/fonts.css'
-      }
-    ]
+    title: pkg.name,
+    titleTemplate: '%s - nuxt-latest-demo'
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: [],
-  /*
-   ** Plugins to load before mounting the App
-   ** https://nuxtjs.org/guide/plugins
-   */
-  plugins: ['~/plugins/vuetify.js'],
-  /*
-   ** Auto import components
-   ** See https://nuxtjs.org/api/configuration-components
-   */
+
+  // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: ['~/assets/css/main.css'],
+
+  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+  plugins: [],
+
+  // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
+    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/moment'
   ],
-  /*
-   ** Nuxt.js modules
-   */
+
+  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/moment',
     '@nuxtjs/proxy',
     '@nuxtjs/pwa',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    'nuxtjs-mdi-font'
   ],
+
   proxy: {
     '/github/': {
       target: 'https://jobs.github.com',
@@ -86,13 +58,12 @@ export default {
       }
     }
   },
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
+
+  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     proxy: true
   },
+
   /*
    ** nuxt-i18n module configuration
    *  See https://nuxt-community.github.io/nuxt-i18n/
@@ -122,16 +93,46 @@ export default {
     },
     vueI18nLoader: true
   },
+
   vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    defaultAssets: false,
     lang: {
       locales: { de, en },
       current: 'de'
-    }
+    },
+    theme: {
+      options: {
+        customProperties: true
+      },
+      dark: false,
+      themes: {
+        light: {
+          primary: colors.indigo.base,
+          secondary: colors.blueGrey.base,
+          accent: colors.orange.base,
+          error: colors.red.base,
+          warning: colors.amber.base,
+          info: colors.lightGreen.base,
+          success: colors.green.base
+        }
+      }
+    },
+    treeShake: true
   },
+
   moment: {
     locales: ['de']
   },
+
   pwa: {
+    manifest: {
+      author: pkg.author,
+      name: pkg.description,
+      short_name: pkg.name,
+      start_url: '/',
+      theme_color: colors.blueGrey.base
+    },
     workbox: {
       config: {
         debug: false
@@ -150,15 +151,8 @@ export default {
       ]
     }
   },
-  serverMiddleware: ['redirect-ssl'],
-  /*
-   ** Build configuration
-   ** See https://nuxtjs.org/api/configuration-build/
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  }
+  // serverMiddleware: ['redirect-ssl'],
+
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {}
 }

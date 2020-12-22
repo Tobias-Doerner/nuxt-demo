@@ -3,7 +3,7 @@
     <template v-slot:activator="{ on }">
       <v-btn color="primary" v-on="on">
         {{ currentUsedLocale }}
-        <v-icon>keyboard_arrow_down</v-icon>
+        <v-icon>mdi-menu-down</v-icon>
       </v-btn>
     </template>
     <v-list>

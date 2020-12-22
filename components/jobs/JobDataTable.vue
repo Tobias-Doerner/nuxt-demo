@@ -20,7 +20,7 @@
         <v-spacer></v-spacer>
         <v-text-field
           v-model="search"
-          append-icon="search"
+          append-icon="mdi-magnify"
           :label="$t('vacancies.table.search')"
           single-line
           hide-details
