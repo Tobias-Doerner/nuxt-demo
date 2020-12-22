@@ -151,7 +151,7 @@ export default {
       ]
     }
   },
-  // serverMiddleware: ['redirect-ssl'],
+  serverMiddleware: ['redirect-ssl'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {}
