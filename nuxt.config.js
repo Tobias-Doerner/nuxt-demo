@@ -1,5 +1,3 @@
-import de from 'vuetify/es5/locale/de'
-import en from 'vuetify/es5/locale/en'
 import colors from 'vuetify/es5/util/colors'
 import pkg from './package'
 
@@ -25,7 +23,7 @@ export default {
   css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/vuetify.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -35,7 +33,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    ['@nuxtjs/vuetify', { defaultAssets: false }],
     '@nuxtjs/moment'
   ],
 
@@ -46,8 +44,7 @@ export default {
     '@nuxtjs/moment',
     '@nuxtjs/proxy',
     '@nuxtjs/pwa',
-    'nuxt-i18n',
-    'nuxtjs-mdi-font'
+    'nuxt-i18n'
   ],
 
   proxy: {
@@ -92,33 +89,6 @@ export default {
       syncRouteParams: false
     },
     vueI18nLoader: true
-  },
-
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    defaultAssets: false,
-    lang: {
-      locales: { de, en },
-      current: 'de'
-    },
-    theme: {
-      options: {
-        customProperties: true
-      },
-      dark: false,
-      themes: {
-        light: {
-          primary: colors.indigo.base,
-          secondary: colors.blueGrey.base,
-          accent: colors.orange.base,
-          error: colors.red.base,
-          warning: colors.amber.base,
-          info: colors.lightGreen.base,
-          success: colors.green.base
-        }
-      }
-    },
-    treeShake: true
   },
 
   moment: {
