@@ -12,13 +12,13 @@
         v-show="isMobile"
         @click="drawer.left.model = !drawer.left.model"
       >
-        <v-icon>mdi-apps</v-icon>
+        <v-icon>mdi-menu</v-icon>
       </v-app-bar-nav-icon>
 
       <v-spacer />
 
       <v-app-bar-nav-icon @click="drawer.right.model = !drawer.right.model">
-        <v-icon>mdi-settings</v-icon>
+        <v-icon>mdi-cog</v-icon>
       </v-app-bar-nav-icon>
     </v-app-bar>
 

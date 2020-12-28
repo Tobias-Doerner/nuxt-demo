@@ -59,7 +59,7 @@ export default {
           link: 'https://twitter.com/Tobias_Doerner'
         },
         {
-          icon: 'mdi-git',
+          icon: 'mdi-github',
           link: 'https://github.com/Tobias-Doerner'
         }
       ]

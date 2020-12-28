@@ -34,10 +34,10 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.5.0",
-    "nuxtjs-mdi-font": "^1.0.2",
     "redirect-ssl": "^1.4.1"
   },
   "devDependencies": {
+    "@mdi/font": "^5.8.55",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/moment": "^1.5.0",
