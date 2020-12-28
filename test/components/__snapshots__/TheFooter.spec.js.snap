@@ -78,7 +78,7 @@ exports[`TheFooter.vue should match with snapshot 1`] = `
             >
               <i
                 aria-hidden="true"
-                class="v-icon notranslate mdi mdi-git theme--light"
+                class="v-icon notranslate mdi mdi-github theme--light"
                 style="font-size: 24px;"
               />
             </span>
