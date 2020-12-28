@@ -1,6 +1,6 @@
 <template>
-  <v-footer :inset="inset" color="brown darken-3" app padless>
-    <v-card flat tile class="brown darken-3 text-center mx-auto">
+  <v-footer :inset="inset" color="blue-grey darken-4" app padless>
+    <v-card flat tile class="blue-grey darken-4 text-center mx-auto">
       <transition name="fade">
         <v-card-text v-show="!collapsed" class="white--text pt-2">
           {{ $t('footer.description') }}
@@ -47,19 +47,19 @@ export default {
       inset: true,
       socials: [
         {
-          icon: 'fab fa-linkedin',
+          icon: 'mdi-linkedin',
           link: 'https://de.linkedin.com/in/tobias-doerner-367170150'
         },
         {
-          icon: 'fab fa-xing',
+          icon: 'mdi-xing',
           link: 'https://www.xing.com/profile/Tobias_Doerner7'
         },
         {
-          icon: 'fab fa-twitter',
+          icon: 'mdi-twitter',
           link: 'https://twitter.com/Tobias_Doerner'
         },
         {
-          icon: 'fab fa-github',
+          icon: 'mdi-git',
           link: 'https://github.com/Tobias-Doerner'
         }
       ]
@@ -67,7 +67,7 @@ export default {
   },
   computed: {
     collapseIcon() {
-      return this.collapsed ? 'fa-chevron-up' : 'fa-chevron-down'
+      return this.collapsed ? 'mdi-chevron-up' : 'mdi-chevron-down'
     }
   }
 }

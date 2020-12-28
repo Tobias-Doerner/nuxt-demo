@@ -2,20 +2,19 @@
  * Getters of the jobs store module.
  */
 export default {
-  /**
-   * Getter for retrieving the jobs array from the state.
-   */
+  getCompanies: (state) => {
+    const companies = new Set()
+    state.jobs.forEach((job) => companies.add(job.company))
+    return Array.from(companies).sort((a, b) => a.localeCompare(b))
+  },
+
   getJobs: (state) => {
-    return state.jobs.map((job) => {
-      return {
-        company: job.company,
-        location: job.location,
-        id: job.id,
-        title: job.title,
-        type: job.type,
-        description: job.description,
-        creationDate: job.creationDate
-      }
-    })
+    return state.jobs
+  },
+
+  getLocations: (state) => {
+    const locations = new Set()
+    state.jobs.forEach((job) => locations.add(job.location))
+    return Array.from(locations).sort((a, b) => a.localeCompare(b))
   }
 }

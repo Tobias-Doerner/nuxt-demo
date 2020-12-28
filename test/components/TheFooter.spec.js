@@ -31,12 +31,12 @@ describe('TheFooter.vue', () => {
   describe('testing computed properties of footer component', () => {
     it('should return chevron-up when footer is collapsed', () => {
       cmp.vm.collapsed = true
-      expect(cmp.vm.collapseIcon).toEqual('fa-chevron-up')
+      expect(cmp.vm.collapseIcon).toEqual('mdi-chevron-up')
     })
 
     it('should return chevron-down when footer is not collapsed', () => {
       cmp.vm.collapsed = false
-      expect(cmp.vm.collapseIcon).toEqual('fa-chevron-down')
+      expect(cmp.vm.collapseIcon).toEqual('mdi-chevron-down')
     })
   })
 })

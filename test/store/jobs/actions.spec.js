@@ -11,7 +11,7 @@ describe('VUEX actions of the jobs module', () => {
     commit = null
   })
 
-  describe('action for retrieving jobs from the REST API', () => {
+  describe.skip('action for retrieving jobs from the REST API', () => {
     it('should retrieve jobs successfully from backend', async () => {
       actions.$axios = {
         get: () => {
@@ -79,50 +79,6 @@ describe('VUEX actions of the jobs module', () => {
       }
 
       await actions.GET_JOBS({ commit })
-
-      expect(commit).toHaveBeenCalledTimes(0)
-    })
-  })
-
-  describe('action for retrieving the description of a job from the REST API', () => {
-    it('should retrieve the job specified by ID from backend', async () => {
-      actions.$axios = {
-        get: () => {
-          return Promise.resolve({
-            status: 200,
-            data: {
-              id: 'c38a8bc4-ad2f-3f98-ef2a-c3a4e956a5a7',
-              type: 'Full Time',
-              company: 'Umbrella Corporation',
-              location: 'Racoon City',
-              title: 'Senior Software Developer',
-              description:
-                'Software Developer for development of backend services wanted. Our business is life itself.',
-              url: 'https://www.umbrella-corporation.com',
-              created_at: 'Tue Dec 17 13:40:57 UTC 2019',
-              how_to_apply:
-                'https://www.umbrella-corporation.com/career/45re-432',
-              company_logo: 'https://www.umbrella-corporation.com/logo.png'
-            }
-          })
-        }
-      }
-
-      await actions.GET_JOB({ commit }, 'c38a8bc4-ad2f-3f98-ef2a-c3a4e956a5a7')
-
-      expect(commit).toHaveBeenCalledWith('SET_DESCRIPTION', {
-        id: 'c38a8bc4-ad2f-3f98-ef2a-c3a4e956a5a7',
-        description:
-          'Software Developer for development of backend services wanted. Our business is life itself.'
-      })
-    })
-
-    it('should handle network error when trying to retrieve a single job from backend.', async () => {
-      actions.$axios = {
-        get: () => Promise.reject(new Error('Network Error'))
-      }
-
-      await actions.GET_JOB({ commit }, 'e34fde32-1234-1234-adfe-c342edff4455')
 
       expect(commit).toHaveBeenCalledTimes(0)
     })

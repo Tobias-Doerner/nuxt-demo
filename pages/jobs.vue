@@ -1,12 +1,14 @@
 <template>
-  <v-container fluid>
-    <job-data-table></job-data-table>
-  </v-container>
+  <!-- <job-data-table></job-data-table> -->
+  <job-overview />
 </template>
 <script>
+// import JobDataTable from '~/components/jobs/JobDataTable'
+import JobOverview from '~/components/jobs/JobOverview'
 export default {
   components: {
-    JobDataTable: () => import('~/components/jobs/JobDataTable.vue')
+    // JobDataTable
+    JobOverview
   }
 }
 </script>

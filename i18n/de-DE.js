@@ -2,6 +2,10 @@ export default {
   appbar: {
     title: 'Nuxt.js'
   },
+  common: {
+    home: 'Home',
+    jobs: 'Jobs'
+  },
   footer: {
     description:
       'Nuxt.js Demo-Anwendung, erstellt von Tobias Dörner, besucht mich auf meinen Social Media Kanälen.',
@@ -32,23 +36,21 @@ export default {
       subtitle: 'Demo Applikation',
       title: 'Nuxt.js'
     },
+    job: {
+      filter: {
+        companies: 'Firmen',
+        locations: 'Orte'
+      }
+    },
     error: {
       link: 'Zurück zum Start',
       'other error': 'Ein Fehler ist aufgetreten!',
       'page not found': 'Seite nicht gefunden!'
     }
   },
-  vacancies: {
-    table: {
-      header: {
-        company: 'Unternehmen',
-        date: 'Erstelldatum',
-        location: 'Einsatzort',
-        title: 'Titel',
-        type: 'Anstellungsart'
-      },
-      search: 'Suche',
-      title: 'Stellenanzeigen'
-    }
+  settings: {
+    darkmode: 'Nachtmodus',
+    language: 'Sprache',
+    title: 'Einstellungen'
   }
 }

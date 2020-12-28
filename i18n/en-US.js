@@ -2,6 +2,10 @@ export default {
   appbar: {
     title: 'Nuxt.js'
   },
+  common: {
+    home: 'Home',
+    jobs: 'Jobs'
+  },
   footer: {
     description:
       'Nuxt.js demo application, developed by Tobias Dörner, visit me on my social media channels.',
@@ -32,23 +36,21 @@ export default {
       subtitle: 'Showcase Application',
       title: 'Nuxt.js'
     },
+    job: {
+      filter: {
+        companies: 'Companies',
+        locations: 'Loacations'
+      }
+    },
     error: {
       link: 'Back to start',
       'other error': 'An error occurred!',
       'page not found': 'Page not found!'
     }
   },
-  vacancies: {
-    table: {
-      header: {
-        company: 'Company',
-        date: 'Date of creation',
-        location: 'Location',
-        title: 'Title',
-        type: 'Job type'
-      },
-      search: 'Search',
-      title: 'Vacancies'
-    }
+  settings: {
+    darkmode: 'Dark Mode',
+    language: 'Language',
+    title: 'Settings'
   }
 }

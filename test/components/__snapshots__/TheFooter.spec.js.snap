@@ -2,11 +2,11 @@
 
 exports[`TheFooter.vue should match with snapshot 1`] = `
 <footer
-  class="v-footer v-sheet theme--light v-footer--fixed v-footer--padless v-footer--inset brown darken-3"
+  class="v-footer v-sheet theme--light v-footer--fixed v-footer--padless v-footer--inset blue-grey darken-4"
   style="left: 0px; right: 0px; bottom: 0px;"
 >
   <div
-    class="brown darken-3 text-center mx-auto v-card v-card--flat v-sheet theme--light rounded-0"
+    class="blue-grey darken-4 text-center mx-auto v-card v-card--flat v-sheet theme--light rounded-0"
   >
     <transition-stub
       name="fade"
@@ -30,7 +30,7 @@ exports[`TheFooter.vue should match with snapshot 1`] = `
             >
               <i
                 aria-hidden="true"
-                class="v-icon notranslate fab fa-linkedin theme--light"
+                class="v-icon notranslate mdi mdi-linkedin theme--light"
                 style="font-size: 24px;"
               />
             </span>
@@ -46,7 +46,7 @@ exports[`TheFooter.vue should match with snapshot 1`] = `
             >
               <i
                 aria-hidden="true"
-                class="v-icon notranslate fab fa-xing theme--light"
+                class="v-icon notranslate mdi mdi-xing theme--light"
                 style="font-size: 24px;"
               />
             </span>
@@ -62,7 +62,7 @@ exports[`TheFooter.vue should match with snapshot 1`] = `
             >
               <i
                 aria-hidden="true"
-                class="v-icon notranslate fab fa-twitter theme--light"
+                class="v-icon notranslate mdi mdi-twitter theme--light"
                 style="font-size: 24px;"
               />
             </span>
@@ -78,7 +78,7 @@ exports[`TheFooter.vue should match with snapshot 1`] = `
             >
               <i
                 aria-hidden="true"
-                class="v-icon notranslate fab fa-github theme--light"
+                class="v-icon notranslate mdi mdi-git theme--light"
                 style="font-size: 24px;"
               />
             </span>
@@ -101,7 +101,7 @@ exports[`TheFooter.vue should match with snapshot 1`] = `
           >
             <i
               aria-hidden="true"
-              class="v-icon notranslate fa fa-chevron-up theme--light"
+              class="v-icon notranslate mdi mdi-chevron-up theme--light"
               style="font-size: 12px;"
             />
           </span>
