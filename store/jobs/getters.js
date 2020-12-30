@@ -9,7 +9,9 @@ export default {
   },
 
   getJobs: (state) => {
-    return state.jobs
+    return [...state.jobs].sort((a, b) => {
+      return new Date(b.created_at) - new Date(a.created_at)
+    })
   },
 
   getLocations: (state) => {

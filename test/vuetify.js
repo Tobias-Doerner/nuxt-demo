@@ -5,27 +5,31 @@ import en from 'vuetify/es5/locale/en'
 
 export function setupVuetify(vueInstance) {
   return new Vuetify({
+    customVariables: ['~/assets/variables.scss'],
     lang: {
       locales: { de, en },
       current: 'de'
     },
-    customVariables: ['~/assets/variables.scss'],
-    icons: {
-      iconfont: 'fa'
-    },
     theme: {
+      options: {
+        customProperties: true
+      },
       dark: false,
       themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+        light: {
+          accent: colors.orange.darken4,
+          heading: colors.blueGrey.darken1,
+          error: colors.red.base,
+          footing: colors.blueGrey.darken1,
+          info: colors.lightGreen.base,
+          menus: colors.blueGrey.lighten4,
+          primary: colors.indigo.base,
+          secondary: colors.blueGrey.base,
+          success: colors.green.base,
+          warning: colors.amber.base
         }
       }
-    }
+    },
+    treeShake: true
   })
 }

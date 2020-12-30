@@ -3,6 +3,7 @@ export default {
     title: 'Nuxt.js'
   },
   common: {
+    about: 'Über mich',
     home: 'Home',
     jobs: 'Jobs'
   },
@@ -39,6 +40,7 @@ export default {
     job: {
       filter: {
         companies: 'Firmen',
+        free_text_search: 'Freitextsuche',
         locations: 'Orte'
       }
     },

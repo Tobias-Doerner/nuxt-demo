@@ -1,5 +1,5 @@
 <template>
-  <v-card width="500" tile>
+  <v-card color="tertiary" width="500" tile>
     <v-card-title>{{ jobTitle }} </v-card-title>
     <v-card-subtitle>
       <h3>{{ company }}</h3>
@@ -14,12 +14,18 @@
         <span>{{ location }}</span>
       </div>
       <div>
+        <v-icon>mdi-calendar-clock</v-icon>
+        <span>{{ createdAt | formatDateTime }}</span>
+      </div>
+      <div v-if="isValidUrl(companyUrl)">
         <v-icon>mdi-web</v-icon>
-        <a :href="companyUrl" target="_blank">{{ companyUrl }}</a>
+        <a :href="companyUrl" rel="noreferrer" target="_blank">
+          {{ companyUrl }}
+        </a>
       </div>
       <div>
         <v-icon>mdi-file-document</v-icon>
-        <a :href="url" target="_blank">{{ id }}</a>
+        <a :href="url" rel="noreferrer" target="_blank">{{ id }}</a>
       </div>
     </v-card-text>
   </v-card>
@@ -37,6 +43,10 @@ export default {
       default: () => ''
     },
     companyUrl: {
+      type: String,
+      default: () => ''
+    },
+    createdAt: {
       type: String,
       default: () => ''
     },
@@ -60,13 +70,27 @@ export default {
       type: String,
       default: () => ''
     }
+  },
+  methods: {
+    isValidUrl(url) {
+      if (url) {
+        try {
+          return !!new URL(url)
+        } catch (e) {
+          return false
+        }
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>
 
 <style>
 .v-card__text,
-.v-card__title {
-  word-break: normal;
+.v-card__title,
+.v-card__subtitle {
+  word-break: normal !important;
 }
 </style>

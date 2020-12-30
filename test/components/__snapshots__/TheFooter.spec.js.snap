@@ -2,119 +2,18 @@
 
 exports[`TheFooter.vue should match with snapshot 1`] = `
 <footer
-  class="v-footer v-sheet theme--light v-footer--fixed v-footer--padless v-footer--inset blue-grey darken-4"
+  class="v-footer v-sheet theme--light v-footer--fixed v-footer--padless footing"
   style="left: 0px; right: 0px; bottom: 0px;"
 >
-  <div
-    class="blue-grey darken-4 text-center mx-auto v-card v-card--flat v-sheet theme--light rounded-0"
+  <span
+    class="mx-auto my-1 text-center white--text"
   >
-    <transition-stub
-      name="fade"
-    >
-      <div
-        class="v-card__text white--text pt-2"
-        style="display: none;"
-      >
-        
-        Nuxt.js Demo-Anwendung, erstellt von Tobias Dörner, besucht mich auf meinen Social Media Kanälen.
-        
-        <div>
-          <a
-            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-            href="https://de.linkedin.com/in/tobias-doerner-367170150"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span
-              class="v-btn__content"
-            >
-              <i
-                aria-hidden="true"
-                class="v-icon notranslate mdi mdi-linkedin theme--light"
-                style="font-size: 24px;"
-              />
-            </span>
-          </a>
-          <a
-            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-            href="https://www.xing.com/profile/Tobias_Doerner7"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span
-              class="v-btn__content"
-            >
-              <i
-                aria-hidden="true"
-                class="v-icon notranslate mdi mdi-xing theme--light"
-                style="font-size: 24px;"
-              />
-            </span>
-          </a>
-          <a
-            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-            href="https://twitter.com/Tobias_Doerner"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span
-              class="v-btn__content"
-            >
-              <i
-                aria-hidden="true"
-                class="v-icon notranslate mdi mdi-twitter theme--light"
-                style="font-size: 24px;"
-              />
-            </span>
-          </a>
-          <a
-            class="mx-4 white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"
-            href="https://github.com/Tobias-Doerner"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span
-              class="v-btn__content"
-            >
-              <i
-                aria-hidden="true"
-                class="v-icon notranslate mdi mdi-github theme--light"
-                style="font-size: 24px;"
-              />
-            </span>
-          </a>
-        </div>
-      </div>
-    </transition-stub>
-     
-    <div
-      class="v-card__text white--text pa-0"
-    >
-      <div>
-        <button
-          aria-label="open or closing the navbar details"
-          class="white--text v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--x-small"
-          type="button"
-        >
-          <span
-            class="v-btn__content"
-          >
-            <i
-              aria-hidden="true"
-              class="v-icon notranslate mdi mdi-chevron-up theme--light"
-              style="font-size: 12px;"
-            />
-          </span>
-        </button>
-      </div>
-       
-      <strong>
-        Nuxt.js Showcase
-      </strong>
-       —
-      2020
+    <strong>
+      Nuxt.js Showcase
+    </strong>
     
-    </div>
-  </div>
+    (1.0.0) 2021
+  
+  </span>
 </footer>
 `;

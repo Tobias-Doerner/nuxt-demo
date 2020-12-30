@@ -20,23 +20,16 @@ describe('TheFooter.vue', () => {
     cmp = mount(TheFooter, {
       localVue,
       i18n,
-      vuetify
+      vuetify,
+      mocks: {
+        $config: {
+          version: '1.0.0'
+        }
+      }
     })
   })
 
   it('should match with snapshot', () => {
     expect(cmp.element).toMatchSnapshot()
-  })
-
-  describe('testing computed properties of footer component', () => {
-    it('should return chevron-up when footer is collapsed', () => {
-      cmp.vm.collapsed = true
-      expect(cmp.vm.collapseIcon).toEqual('mdi-chevron-up')
-    })
-
-    it('should return chevron-down when footer is not collapsed', () => {
-      cmp.vm.collapsed = false
-      expect(cmp.vm.collapseIcon).toEqual('mdi-chevron-down')
-    })
   })
 })

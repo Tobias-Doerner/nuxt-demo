@@ -1,13 +1,28 @@
 <template>
   <v-card class="ma-0 pa-0" tile>
     <v-toolbar>
-      <v-toolbar-title>{{ $t('common.jobs') }}</v-toolbar-title>
+      <v-toolbar-title>
+        {{ $t('common.jobs') }}
+        <v-chip class="ma-0 pa-2" color="secondary" small>
+          <strong>{{ jobs.length }}</strong>
+        </v-chip>
+      </v-toolbar-title>
       <v-spacer />
       <v-toolbar-items>
-        <v-btn icon @click="showFilter = !showFilter">
+        <v-btn
+          :disabled="isLoading"
+          aria-label="Filter"
+          icon
+          @click="showFilter = !showFilter"
+        >
           <v-icon>mdi-filter</v-icon>
         </v-btn>
-        <v-btn icon @click="loadJobs">
+        <v-btn
+          :disabled="isLoading"
+          aria-label="Refresh"
+          icon
+          @click="loadJobs"
+        >
           <v-icon>mdi-refresh</v-icon>
         </v-btn>
       </v-toolbar-items>
@@ -16,6 +31,14 @@
     <v-fade-transition>
       <v-container v-show="showFilter" fluid>
         <v-row no-gutters>
+          <v-text-field
+            v-model="textFilter"
+            :label="$t('page.job.filter.free_text_search')"
+            class="mx-2"
+            clearable
+            dense
+            outlined
+          />
           <v-combobox
             v-model="selectedLocations"
             :items="locations"
@@ -52,6 +75,7 @@
           :company="job.company"
           :company-logo="job.company_logo"
           :company-url="job.company_url"
+          :created-at="job.created_at"
           :job-title="job.title"
           :job-type="job.type"
           :location="job.location"
@@ -75,7 +99,8 @@ export default {
       isLoading: true,
       selectedCompanies: [],
       selectedLocations: [],
-      showFilter: false
+      showFilter: false,
+      textFilter: ''
     }
   },
   computed: {
@@ -84,6 +109,12 @@ export default {
     },
     jobs() {
       let jobs = this.$store.getters['jobs/getJobs']
+
+      if (!!this.textFilter && this.textFilter.length > 0) {
+        jobs = jobs.filter((job) =>
+          job.description.toLowerCase().includes(this.textFilter.toLowerCase())
+        )
+      }
 
       if (this.selectedLocations.length > 0) {
         jobs = jobs.filter((job) =>

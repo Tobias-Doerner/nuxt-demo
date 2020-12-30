@@ -8,8 +8,8 @@ exports[`index snapshot test 1`] = `
     class="row justify-center"
   >
     <div
-      class="mx-auto v-card v-sheet theme--light elevation-2"
-      style="max-width: 500px;"
+      class="mx-auto v-card v-sheet theme--light"
+      style="max-width: 700px;"
     >
       <svg
         style="background: rgb(232, 245, 233);"
@@ -52,7 +52,7 @@ exports[`index snapshot test 1`] = `
       </div>
        
       <div
-        class="v-card__text text--primary"
+        class="v-card__text"
       >
         <p>
           Showcase Anwendung zur Veranschaulichung der Fähigkeiten des Nuxt.js Frameworks.
@@ -93,7 +93,7 @@ exports[`index snapshot test 1`] = `
         class="v-card__actions"
       >
         <a
-          class="v-btn v-btn--contained v-btn--is-elevated v-btn--has-bg theme--dark v-size--default brown darken-2"
+          class="v-btn v-btn--contained v-btn--is-elevated v-btn--has-bg theme--light v-size--default primary"
           href="https://github.com/Tobias-Doerner/nuxt-demo"
           rel="noreferrer"
           target="_blank"
@@ -101,7 +101,9 @@ exports[`index snapshot test 1`] = `
           <span
             class="v-btn__content"
           >
-            Hole dir den Quellcode
+            
+          Hole dir den Quellcode
+        
           </span>
         </a>
       </div>

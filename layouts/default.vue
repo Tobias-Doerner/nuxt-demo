@@ -2,24 +2,32 @@
   <v-app>
     <v-app-bar
       :clipped-left="drawer.left.clipped"
-      color="blue-grey darken-4"
+      color="heading"
       app
-      dark
       dense
       fixed
     >
       <v-app-bar-nav-icon
         v-show="isMobile"
+        aria-label="Menu"
         @click="drawer.left.model = !drawer.left.model"
       >
-        <v-icon>mdi-menu</v-icon>
+        <v-icon color="white">mdi-menu</v-icon>
       </v-app-bar-nav-icon>
 
       <v-spacer />
 
-      <v-app-bar-nav-icon @click="drawer.right.model = !drawer.right.model">
-        <v-icon>mdi-cog</v-icon>
-      </v-app-bar-nav-icon>
+      <div class="title white--text">Nuxt.js Showcase</div>
+
+      <v-spacer />
+
+      <v-btn
+        aria-label="Settings"
+        icon
+        @click="drawer.right.model = !drawer.right.model"
+      >
+        <v-icon color="white">mdi-cog</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -28,9 +36,8 @@
       :expand-on-hover="!isMobile"
       :mini-variant="drawer.left.miniVariant"
       :permanent="!isMobile"
-      color="blue-grey darken-3"
+      color="menus"
       app
-      dark
       fixed
       left
     >
@@ -40,7 +47,7 @@
     <v-navigation-drawer
       v-model="drawer.right.model"
       :clipped="drawer.right.clipped"
-      color="blue-grey darken-3"
+      color="menus"
       app
       right
       temporary

@@ -4,9 +4,9 @@
       v-for="item in items"
       :key="item.id"
       :to="item.route"
+      color="accent"
       exact
       router
-      color="accent"
     >
       <v-list-item-action>
         <v-icon>{{ item.icon }}</v-icon>
@@ -36,6 +36,12 @@ export default {
           id: '2',
           route: '/jobs',
           text: this.$t('common.jobs')
+        },
+        {
+          icon: 'mdi-information',
+          id: '3',
+          route: '/about',
+          text: this.$t('common.about')
         }
       ]
     }

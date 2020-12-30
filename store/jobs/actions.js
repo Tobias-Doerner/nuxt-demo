@@ -9,20 +9,15 @@ export default {
    * @async
    */
   async GET_JOBS({ commit }) {
-    const promises = []
-    const pages = 5
+    const pages = 20
 
     for (let i = 1; i <= pages; i++) {
-      promises.push(
-        this.$axios
-          .get('/github/positions.json?page=' + i)
-          .then((res) => {
-            if (res.status === 200) commit('ADD_JOBS', res.data)
-          })
-          .catch((e) => {})
-      )
+      const res = await this.$axios.get('/github/positions.json?page=' + i)
+      if (res.status === 200 && res.data.length > 0) {
+        commit('ADD_JOBS', res.data)
+      } else {
+        break
+      }
     }
-
-    await Promise.all(promises)
   }
 }

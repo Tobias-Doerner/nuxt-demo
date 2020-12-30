@@ -1,4 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
+import de from 'vuetify/es5/locale/de'
+import en from 'vuetify/es5/locale/en'
 import pkg from './package'
 
 export default {
@@ -23,7 +25,7 @@ export default {
   css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js', '~/plugins/formatter.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -44,6 +46,7 @@ export default {
     '@nuxtjs/moment',
     '@nuxtjs/proxy',
     '@nuxtjs/pwa',
+    '@nuxtjs/universal-storage',
     'nuxt-i18n'
   ],
 
@@ -56,6 +59,14 @@ export default {
     }
   },
 
+  router: {
+    middleware: ['theme']
+  },
+
+  publicRuntimeConfig: {
+    version: pkg.version
+  },
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     proxy: true
@@ -66,29 +77,68 @@ export default {
    *  See https://nuxt-community.github.io/nuxt-i18n/
    */
   i18n: {
-    vueI18n: {
-      silentFallbackWarn: true
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,
+      useCookie: true
     },
+    langDir: 'i18n/',
+    lazy: true,
     locales: [
       { code: 'de', iso: 'de-DE', file: 'de-DE.js', name: 'deutsch' },
       { code: 'en', iso: 'en-US', file: 'en-US.js', name: 'english' }
     ],
-    lazy: true,
-    langDir: 'i18n/',
     strategy: 'no_prefix',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'lang',
-      alwaysRedirect: true,
-      fallbackLocale: 'en'
-    },
     vuex: {
       moduleName: 'i18n',
       syncLocale: true,
       syncMessages: false,
       syncRouteParams: false
+    }
+  },
+
+  vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    lang: {
+      locales: { de, en },
+      current: 'de'
     },
-    vueI18nLoader: true
+    theme: {
+      options: {
+        customProperties: true
+      },
+      dark: false,
+      themes: {
+        dark: {
+          accent: colors.orange.darken1,
+          heading: colors.blueGrey.darken4,
+          error: colors.red.base,
+          footing: colors.blueGrey.darken4,
+          info: colors.lightGreen.base,
+          menus: colors.blueGrey.darken3,
+          primary: colors.blue.lighten2,
+          secondary: colors.blueGrey.base,
+          success: colors.green.base,
+          tertiary: '#323232',
+          warning: colors.amber.base
+        },
+        light: {
+          accent: colors.orange.darken4,
+          heading: colors.blueGrey.darken1,
+          error: colors.red.base,
+          footing: colors.blueGrey.darken1,
+          info: colors.lightGreen.base,
+          menus: colors.blueGrey.lighten4,
+          primary: colors.blue.darken2,
+          secondary: colors.blueGrey.base,
+          success: colors.green.base,
+          tertiary: colors.grey.lighten4,
+          warning: colors.amber.base
+        }
+      }
+    },
+    treeShake: true
   },
 
   moment: {
