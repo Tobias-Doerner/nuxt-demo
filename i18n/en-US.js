@@ -39,7 +39,7 @@ export default {
     job: {
       filter: {
         companies: 'Companies',
-        locations: 'Loacations'
+        locations: 'Locations'
       }
     },
     error: {
