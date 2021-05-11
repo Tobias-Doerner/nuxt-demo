@@ -93,7 +93,7 @@ exports[`index snapshot test 1`] = `
         class="v-card__actions"
       >
         <a
-          class="v-btn v-btn--contained v-btn--is-elevated v-btn--has-bg theme--light v-size--default primary"
+          class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default primary"
           href="https://github.com/Tobias-Doerner/nuxt-demo"
           rel="noreferrer"
           target="_blank"
