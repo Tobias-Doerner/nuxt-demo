@@ -19,3 +19,15 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+import ChooserLanguage from '~/components/nav/ChooserLanguage'
+import ChooserTheme from '~/components/nav/ChooserTheme'
+
+export default {
+  components: {
+    ChooserLanguage,
+    ChooserTheme
+  }
+}
+</script>

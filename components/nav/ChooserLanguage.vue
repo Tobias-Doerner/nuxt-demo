@@ -1,7 +1,7 @@
 <template>
   <v-menu offset-y>
-    <template v-slot:activator="{ on }">
-      <v-btn small v-on="on">
+    <template v-slot:activator="{ on, attrs }">
+      <v-btn small v-bind="attrs" v-on="on">
         {{ currentUsedLocale }} <v-icon>mdi-menu-down</v-icon>
       </v-btn>
     </template>

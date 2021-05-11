@@ -17,7 +17,7 @@
 
       <v-spacer />
 
-      <div class="title white--text">Nuxt.js Showcase</div>
+      <div class="title white--text">{{ $t('footer.title') }}</div>
 
       <v-spacer />
 
