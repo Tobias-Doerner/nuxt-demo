@@ -1,13 +1,7 @@
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   modules: ['@nuxtjs/eslint-module', '@nuxtjs/i18n'],
   ssr: false,
-  vite: {
-    plugins: [VueI18nPlugin.vite({})],
-  },
   i18n: {
     vueI18n: './i18n.config.ts',
     defaultLocale: 'en',
