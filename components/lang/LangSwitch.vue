@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
 const { locale, locales, setLocale } = useI18n()
 
 const currentLocale = computed({
@@ -8,7 +9,8 @@ const currentLocale = computed({
     return locales.value.find(el => el.code === locale.value)
   },
   set(newLocale) {
-    if (newLocale) setLocale(newLocale.code)
+    if (newLocale)
+      setLocale(newLocale.code)
   },
 })
 </script>

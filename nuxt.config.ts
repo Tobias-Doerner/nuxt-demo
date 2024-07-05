@@ -1,10 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/eslint-module', '@nuxtjs/i18n'],
+  devtools: { enabled: true },
+  compatibilityDate: '2024-07-04',
+  modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
   nitro: {
     compressPublicAssets: true,
   },
   ssr: false,
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
     defaultLocale: 'en',
