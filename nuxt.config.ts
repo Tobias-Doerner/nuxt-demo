@@ -20,7 +20,6 @@ export default defineNuxtConfig({
       redirectOn: 'root',
       useCookie: true,
     },
-    langDir: 'i18n',
     lazy: true,
     locales: [
       {

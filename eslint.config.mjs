@@ -21,7 +21,7 @@ export default withNuxt(antfu({}))
     },
     settings: {
       'vue-i18n': {
-        localeDir: './i18n/*.{json,json5,yaml,yml}',
+        localeDir: './i18n/locales/*.{json,json5,yaml,yml}',
         messageSyntaxVersion: '^9.0.0',
       },
     },

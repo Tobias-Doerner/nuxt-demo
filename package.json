@@ -13,14 +13,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^8.5.0",
-    "nuxt": "^3.12.3",
     "vue": "latest"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@intlify/eslint-plugin-vue-i18n": "^3.0.0",
-    "@nuxt/eslint": "^0.7.0",
-    "eslint": "^9.13.0"
+    "@antfu/eslint-config": "^4.1.1",
+    "@intlify/eslint-plugin-vue-i18n": "4.0.0-next.1",
+    "@nuxt/eslint": "^1.0.0",
+    "@nuxtjs/i18n": "^9.1.1",
+    "eslint": "^9.16.0",
+    "nuxt": "^3.15.4"
   }
 }

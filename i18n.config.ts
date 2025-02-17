@@ -1,9 +1,8 @@
-import de from './i18n/de-DE.json'
-import en from './i18n/en-US.json'
-
 export default defineI18nConfig(() => ({
-  messages: {
-    de,
-    en,
-  },
+  availableLocales: ['de', 'en'],
+  fallbackLocale: 'en',
+  fallbackWarn: true,
+  globalInjection: true,
+  legacy: false,
+  missingWarn: true,
 }))
