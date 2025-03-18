@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
   },
   ssr: false,
+  telemetry: {
+    enabled: false,
+  },
   eslint: {
     config: {
       standalone: false,
