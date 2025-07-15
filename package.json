@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.1",
-    "@intlify/eslint-plugin-vue-i18n": "4.0.0",
+    "@intlify/eslint-plugin-vue-i18n": "^4.0.1",
     "@nuxt/eslint": "^1.2.0",
     "@nuxtjs/i18n": "^9.3.1",
     "eslint": "^9.22.0",
